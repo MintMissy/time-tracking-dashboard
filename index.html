@@ -10,6 +10,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
@@ -24,15 +25,15 @@
             </div>
           </header>
           <nav class="card--report-nav">
-            <ul class="card--report-nav-links">
-              <li class="card--report-nav-link">Daily</li>
-              <li class="card--report-nav-link active">Weekly</li>
-              <li class="card--report-nav-link">Monthly</li>
+            <ul class="card--report-nav-tabs">
+              <li class="card--report-nav-tab js-tab" data-type="daily">Daily</li>
+              <li class="card--report-nav-tab js-tab" data-type="weekly">Weekly</li>
+              <li class="card--report-nav-tab js-tab" data-type="monthly">Monthly</li>
             </ul>
           </nav>
         </div>
 
-        <div class="card card--data card--work">
+        <div class="card card--data card--work js-data-card" card-data-title="Work">
           <div class="card__banner bg-light-orange">
             <img src="./images/icon-work.svg" alt="work icon" />
           </div>

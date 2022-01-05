@@ -223,24 +223,24 @@ $cardBgColor: var(--clr-dark-blue);
   padding: 0.25rem $cardPadding;
 }
 
-.card--report-nav-links {
+.card--report-nav-tabs {
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: space-between;
 }
 
-.card--report-nav-link {
+.card--report-nav-tab {
   color: white;
   opacity: 0.3;
   font-weight: 400;
 }
 
-.card--report-nav-link:hover {
+.card--report-nav-tab:hover {
   opacity: 0.6;
 }
 
-.card--report-nav-link.active {
+.card--report-nav-tab.active {
   color: white;
   opacity: 1;
 }
