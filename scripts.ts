@@ -150,7 +150,7 @@ function swapCardData(card: Element, dataType: string) {
   cardsData.forEach((data) => {
     if (data.title === dataTitle) {
       const previousPrefix = getCardsPreviousPrefix(dataType);
-      currentHTML.innerHTML = data.timeframes[dataType].current;
+      currentHTML.innerHTML = data.timeframes[dataType].current + 'hrs';
       previousHTML.innerHTML =
         previousPrefix + data.timeframes[dataType].previous;
       return;
