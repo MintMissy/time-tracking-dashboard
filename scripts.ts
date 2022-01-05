@@ -128,6 +128,17 @@ function switchTab(tab: Element) {
   dataCards.forEach((card) => swapCardData(card, dataType));
 }
 
+function getCardsPreviousPrefix(dataType: string) {
+  switch (dataType) {
+    case 'daily':
+      return 'Yesterday - ';
+    case 'weekly':
+      return 'Previous Week - ';
+    case 'monthly':
+      return 'Previous Month - ';
+  }
+}
+
 // Changing cards data logic
 function swapCardData(card: Element, dataType: string) {
   // Get data title from card and result html elements
@@ -138,8 +149,10 @@ function swapCardData(card: Element, dataType: string) {
   // Set new values
   cardsData.forEach((data) => {
     if (data.title === dataTitle) {
+      const previousPrefix = getCardsPreviousPrefix(dataType);
       currentHTML.innerHTML = data.timeframes[dataType].current;
-      previousHTML.innerHTML = data.timeframes[dataType].previous;
+      previousHTML.innerHTML =
+        previousPrefix + data.timeframes[dataType].previous;
       return;
     }
   });

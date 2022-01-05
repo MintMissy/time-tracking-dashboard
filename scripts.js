@@ -121,6 +121,16 @@ function switchTab(tab) {
     var dataType = currentTab.getAttribute('data-type');
     dataCards.forEach(function (card) { return swapCardData(card, dataType); });
 }
+function getCardsPreviousPrefix(dataType) {
+    switch (dataType) {
+        case 'daily':
+            return 'Yesterday - ';
+        case 'weekly':
+            return 'Previous Week - ';
+        case 'monthly':
+            return 'Previous Month - ';
+    }
+}
 // Changing cards data logic
 function swapCardData(card, dataType) {
     // Get data title from card and result html elements
@@ -130,8 +140,10 @@ function swapCardData(card, dataType) {
     // Set new values
     cardsData.forEach(function (data) {
         if (data.title === dataTitle) {
+            var previousPrefix = getCardsPreviousPrefix(dataType);
             currentHTML.innerHTML = data.timeframes[dataType].current;
-            previousHTML.innerHTML = data.timeframes[dataType].previous;
+            previousHTML.innerHTML =
+                previousPrefix + data.timeframes[dataType].previous;
             return;
         }
     });

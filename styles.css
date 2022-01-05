@@ -265,8 +265,8 @@ body {
 
 .card--data .card__banner img {
   position: absolute;
-  top: -0.8rem;
-  right: 1rem;
+  top: -0.3rem;
+  right: 1.3rem;
   z-index: 1;
 }
 
@@ -290,6 +290,7 @@ body {
 }
 
 .attribution {
+  margin-top: 1.5rem;
   font-size: 11px;
   color: var(--clr-white);
   opacity: 0.6;
