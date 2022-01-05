@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+:root {
+  --clr-blue: hsl(246, 80%, 60%);
+  --clr-light-orange: hsl(15, 100%, 70%);
+  --clr-soft-blue: hsl(195, 74%, 62%);
+  --clr-light-red: hsl(348, 100%, 68%);
+  --clr-lime-green: hsl(145, 58%, 55%);
+  --clr-violet: hsl(264, 64%, 52%);
+  --clr-soft-orange: hsl(43, 84%, 65%);
+  --clr-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-pale-blue: hsl(236, 100%, 87%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+.bg-light-orange {
+  background-color: var(--clr-light-orange) !important;
+}
+
+.bg-blue {
+  background-color: var(--clr-blue) !important;
+}
+
+.bg-soft-blue {
+  background-color: var(--clr-soft-blue) !important;
+}
+
+.bg-light-red {
+  background-color: var(--clr-light-red) !important;
+}
+
+.bg-lime-green {
+  background-color: var(--clr-lime-green) !important;
+}
+
+.bg-violet {
+  background-color: var(--clr-violet) !important;
+}
+
+.bg-soft-orange {
+  background-color: var(--clr-soft-orange) !important;
+}
+
+body {
+  background-color: var(--clr-very-dark-blue);
+  padding: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "report" "work" "play" "study" "exercise" "social" "selfCare";
+  gap: 1.5rem;
+}
+
+.card--report {
+  grid-area: report;
+}
+
+.card--work {
+  grid-area: work;
+}
+
+.card--play {
+  grid-area: play;
+}
+
+.card--study {
+  grid-area: study;
+}
+
+.card--exercise {
+  grid-area: exercise;
+}
+
+.card--social {
+  grid-area: social;
+}
+
+.card--selfCare {
+  grid-area: selfCare;
+}
+
+.card {
+  border-radius: 1rem;
+  background-color: var(--clr-dark-blue);
+  overflow: hidden;
+  position: relative;
+}
+
+.card__header,
+.card__content {
+  padding: 1.5rem;
+}
+
+.card__header--report {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.card__header--report img {
+  border: 2px solid var(--clr-white);
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+}
+
+.card__header--report h2 {
+  opacity: 0.7;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--clr-white);
+}
+
+.card__header--report h1 {
+  opacity: 0.9;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--clr-white);
+}
+
+.card--report-nav {
+  padding: 0.25rem 1.5rem;
+}
+
+.card--report-nav-links {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card--report-nav-link {
+  color: white;
+  opacity: 0.3;
+  font-weight: 400;
+}
+
+.card--report-nav-link:hover {
+  opacity: 0.6;
+}
+
+.card--report-nav-link.active {
+  color: white;
+  opacity: 1;
+}
+
+.card--data .card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.card--data .card__header {
+  position: relative;
+  background-color: var(--clr-dark-blue);
+  z-index: 10;
+}
+
+.card--data .card__header {
+  border-radius: 1rem;
+  margin-top: -1rem;
+}
+
+.card--data .card__header h1 {
+  font-size: 1.5rem;
+  color: var(--clr-white);
+  font-weight: 400;
+}
+
+.card__header-more-btn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  color: var(--clr-white);
+}
+
+.card--data .card__banner {
+  height: calc(40px + 1rem);
+  width: 100%;
+}
+
+.card--data .card__banner img {
+  position: absolute;
+  top: -0.8rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+.card--data .card__content {
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__content-current {
+  font-size: 2rem;
+  color: var(--clr-white);
+  font-weight: 300;
+}
+
+.card__content-previous {
+  color: var(--clr-white);
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+.attribution {
+  font-size: 11px;
+  color: var(--clr-white);
+  opacity: 0.6;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--clr-lime-green);
+}
+
+/*# sourceMappingURL=styles.css.map */

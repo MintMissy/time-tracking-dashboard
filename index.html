@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div class="grid-container">
+        <div class="card card--report">
+          <header class="card__header card__header--report bg-blue">
+            <img src="./images/image-jeremy.png" alt="User Avatar" />
+            <div class="card__header__content">
+              <h2>Report for</h2>
+              <h1>Jeremy Robson</h1>
+            </div>
+          </header>
+          <nav class="card--report-nav">
+            <ul class="card--report-nav-links">
+              <li class="card--report-nav-link">Daily</li>
+              <li class="card--report-nav-link active">Weekly</li>
+              <li class="card--report-nav-link">Monthly</li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="card card--data card--work">
+          <div class="card__banner bg-light-orange">
+            <img src="./images/icon-work.svg" alt="work icon" />
+          </div>
+          <header class="card__header">
+            <h1 class="card__header-title">Work</h1>
+            <img src="./images/icon-ellipsis.svg" alt="More details"
+            class="card__header-more-btn" title="More details">
+            </img>
+          </header>
+          <div class="card__content">
+            <p class="card__content-current">32hrs</p>
+            <p class="card__content-previous">Last Week - 36hrs</p>
+          </div>
+        </div>
+
+        <div class="card card--data card--play"></div>
+        <div class="card card--data card--study"></div>
+        <div class="card card--data card--exercise"></div>
+        <div class="card card--data card--social"></div>
+        <div class="card card--data card--selfCare"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
+</html>
